@@ -22,8 +22,9 @@ public class StripeService {
         Stripe.apiKey = secretKey;
 
         SessionCreateParams.LineItem.PriceData.ProductData productData = SessionCreateParams.LineItem.PriceData.ProductData.builder()
-                .setName(productRequest.getName()).build();
-//                .setDescription("")
+                .setName(productRequest.getName())
+                .setDescription(productRequest.getDescription())
+                .build();
 
         SessionCreateParams.LineItem.PriceData priceData = SessionCreateParams.LineItem.PriceData.builder()
                 .setCurrency(productRequest.getCurrency() == null ? "GBP" : productRequest.getCurrency())

@@ -1,8 +1,6 @@
 package online.aleksdraka.stripepayment.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.math.BigDecimal;
 
@@ -13,5 +11,6 @@ public class ProductRequest {
     private BigDecimal amount;
     private Long quantity;
     private String name;
+    private String description;
     private String currency;
 }
